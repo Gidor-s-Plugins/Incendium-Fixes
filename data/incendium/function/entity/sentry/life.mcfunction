@@ -1,7 +1,7 @@
 # from: entity/sentry/main
 # @s: Sentry "life" marker
 
-execute store result entity @s Rotation[0] float 1 run data get entity @e[type=blaze,tag=in.sentry,limit=1,sort=nearest] Rotation[0]
+execute store result entity @s Rotation[0] float 1 run data get entity @e[type=blaze,tag=in.sentry,limit=1,sort=nearest,distance=..2] Rotation[0]
 execute store result entity @s Rotation[1] float 1 run scoreboard players get $sentry_lives in.dummy
 
 # update rotation as well

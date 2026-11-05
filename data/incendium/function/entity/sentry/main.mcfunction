@@ -9,4 +9,4 @@ execute if entity @s[tag=in.sentry_active] run particle minecraft:electric_spark
 execute if entity @s[tag=in.sentry_active,predicate=incendium:random/5] positioned ~ ~1.4 ~ facing entity @p[distance=..40,tag=in.valid_player] eyes run function incendium:entity/sentry/ray/start_ray
 
 # "Lives" Particles
-execute anchored eyes positioned ^ ^ ^ as @e[type=marker,tag=in.sentry_life,limit=1,sort=nearest] run function incendium:entity/sentry/life
+execute anchored eyes positioned ^ ^ ^ as @e[type=marker,tag=in.sentry_life,limit=1,sort=nearest,distance=..2] run function incendium:entity/sentry/life

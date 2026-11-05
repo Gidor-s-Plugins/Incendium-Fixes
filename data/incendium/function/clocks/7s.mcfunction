@@ -22,4 +22,7 @@ tag @e[tag=in.shot] remove in.shot
 
 kill @e[type=falling_block,tag=in.kill_fire]
 
+# orphaned sentry "life" markers (sentry died/removed) -> remove
+execute as @e[type=marker,tag=in.sentry_life] at @s unless entity @e[type=blaze,tag=in.sentry,distance=..2] run kill @s
+
 function incendium:technical/summon_helper
